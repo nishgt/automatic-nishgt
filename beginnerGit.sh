@@ -18,6 +18,7 @@ cd .git_engine/
 while [[ $BRANCHING != 1 && $BRANCHING != 2 && $BRANCHING != 3 ]]
 do
 
+clear
 printf "${cyan}1. Klasörü Güncelle\n2. Değişiklikleri Gönder\n${red}3. Kayıtları Görüntüle${reset}\n$(drawLine)\n${reset}"
 read -p "${cyan}Ne yapmak istiyorsun?:${reset}" BRANCHING
     
