@@ -40,7 +40,7 @@ read -p "${cyan}Değişikliğin hangi maddeyi içeriyor?:${reset}" SELECTION
             COMMIT_HEADER="fix:"
 
         else
-            echo "Lütfen yukardaki sayılardan birini gir!"
+            echo "Lütfen yukarıdaki sayılardan birini gir!"
             sleep 1 && clear
         fi
 done
@@ -55,4 +55,4 @@ sleep 1 && clear
 cd ..
 git add .
 git commit -m "$COMMIT"
-git push
+git push origin master
