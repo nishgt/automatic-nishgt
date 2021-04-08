@@ -55,4 +55,4 @@ sleep 1 && clear
 cd ..
 git add .
 git commit -m "$COMMIT"
-git push origin master
+git push
