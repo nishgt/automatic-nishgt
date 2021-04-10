@@ -8,7 +8,7 @@ reset=`tput sgr0`
 
 drawLine (){
     for (( i=1; i<=40; i++ ))
-    do  
+    do
         printf "-"
     done
 }
@@ -21,7 +21,7 @@ do
 clear
 printf "${cyan}1. Klasörü Güncelle\n2. Değişiklikleri Gönder\n${red}3. Kayıtları Görüntüle${reset}\n$(drawLine)\n${reset}"
 read -p "${cyan}Ne yapmak istiyorsun?:${reset}" BRANCHING
-    
+
     if [[ $BRANCHING == 1 ]]; then
         clear && bash sync.sh
 
@@ -29,8 +29,8 @@ read -p "${cyan}Ne yapmak istiyorsun?:${reset}" BRANCHING
             clear && bash push.sh
 
         elif [[ $BRANCHING == 3 ]]; then
-            clear && git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  
+            clear && git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit && sleep 10
+
         else
             echo "Lütfen bir işlem seçin!"
             sleep 1 && clear
